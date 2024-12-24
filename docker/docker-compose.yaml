@@ -1,0 +1,15 @@
+services:
+  postgres_project_mini_blog:
+    image: postgres:latest
+    container_name: postgres_project_mini_blog
+    environment:
+      POSTGRES_USER: onevashka
+      POSTGRES_PASSWORD: hptth.ru789
+      POSTGRES_DB: mini_blog
+    ports:
+      - '5430:5432'
+    volumes:
+      - postgres_data_mini_blog:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_mini_blog:
