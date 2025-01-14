@@ -18,4 +18,8 @@ class User(Base):
     
     role_id: Mapped[int] = mapped_column(ForeignKey('roles.id'), default=1, server_default=text('1'))
     roles: Mapped['Role'] = relationship('Role', back_populates='users', lazy='joined')
+    blogs: Mapped[list['Blog']] = relationship(back_populates='user')
 
+    @property
+    def is_admin(self) -> bool:
+        return self.role.name == 'admin'

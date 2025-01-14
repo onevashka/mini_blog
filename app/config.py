@@ -16,6 +16,7 @@ DB_NAME = getenv('DB_NAME')
 
 DATABASE_URL = f'postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
 
+print(ALGORITHM)
 
 def get_auth_data():
     return {'secret_key': SECRET_KEY, 'algorithm': ALGORITHM}

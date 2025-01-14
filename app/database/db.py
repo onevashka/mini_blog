@@ -16,6 +16,8 @@ def get_session():
         yield session
     except Exception as e:
         raise e
+    finally:
+        session.close()
 
 
 class Base(AsyncAttrs, DeclarativeBase):

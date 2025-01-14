@@ -10,6 +10,7 @@ from alembic import context
 from app.database.db import Base
 from app.config import DATABASE_URL
 from app.auth.schemas import *
+from app.api.schemas import *
 
 
 # this is the Alembic Config object, which provides
