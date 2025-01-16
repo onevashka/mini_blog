@@ -3,7 +3,7 @@ from .auth.router import router as router_auth
 from .api.router import router as router_blog
 from .pages.router import router as frontend_router
 from fastapi.staticfiles import StaticFiles
-
+# dfsrgdfgdfgd
 
 app = FastAPI()
 app.include_router(router_auth)
